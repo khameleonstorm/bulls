@@ -1,21 +1,20 @@
- {% load static %}
+{% load static %}
 
- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Bulls</title>
+    <title>Deposit</title>
     <link rel="stylesheet" href="{% static 'css/bc.css' %}">
-    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/deposit-coin.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="about">
+    <section class="sign">
         <header class="header">
             <nav class="navbar">
                 <a href="{% url 'index' %}" class="nav-logo"><h1>BULLCITY</h1></a>
@@ -44,44 +43,16 @@
         </nav>
         </header>
 
-
-        <div class="about-bull">
-            <div>
-                <h1>BULLCITY</h1>
-                <p>BULLCITY is an NFT community created to help optimistic traders
-                 illuminate there vision of digital exchange, the bullish market is 
-                 always guaranteed as long as traders keep buying the bull tokens.
-                </p>
-                <p>
-                    BULL NFTs will be launched soon and intigrated into blockchain 
-                    game development, bull traders get the chance to fight the bears and earn Bull.
-                </p>
-            </div>
-
-            <div>
-                <img src="{% static 'img/Asterion__Lionel_Prats-removebg-preview.png' %}" alt="asterion">
+        <div class="container">
+            <div class="qr-wrap">
+                <div><img src="{% static 'img/QR-usdt.jpg' %}"></div>
+                <div><input type="text" value="0xB82D21eCA8EAE8baBDE7c7eE957E4C26Bdcb59E4" id="myInput"></div>
+                <div><p onclick="myFunction()" class="copy1">copy</p></div>
+                <a class="buy" href="https://www.moonpay.com/buy/usdt">Buy</a>
+                <div><p>Send only <b>Tether(USDT)</b> to this address</p><p>Sending any other coin may result to permanent loss.</p></div>
             </div>
         </div>
 
- 
-    
-    </section>
-
-    <section class="about">
-        <div class="about-us">
-            <div>
-                <h1>About Us</h1>
-                <p>
-                    BULL is the official token of the ERC Network
-                    Bull holders will be rewarded with BULLs that can be swaped to other coins
-                    or trade in the NFT MARKETPLACE,
-                    airdropped bi-weekly to “opted-in” holders.
-                </p>
-            </div>
-            <div>
-                <img src="{% static 'img/Eth-market-upd-removebg-preview.png' %}" alt="eth">
-            </div>
-        </div>
     </section>
 
     <footer>
@@ -93,13 +64,13 @@
         </div>
         <div class="logo"><a href="{% url 'index' %}"><h1>BULLCITY</h1></a></div>
            <div class="icons">
-               <a href="https://discord.gg/WUhuF9jX"><img src="{% static 'img/discord.png' %}" alt="discord"></a>
-               <a href="https://twitter.com/BULLCIT79432620?t=YKJia30azaUZ3CoXqg6acA&s=09"><img src="{% static 'img/Free_Twitter_3D_Illustration_download_in_PNG__OBJ_or_Blend_format-removebg-preview.png' %}" alt="twitter"></a>
-               <a href="https://t.me/+WBsM9InLDuY1YzFk"><img src="{% static 'img/telegram.png' %}" alt="telegram"></a>
+                <a href="https://discord.gg/WUhuF9jX"><img src="{% static '' %}" alt="discord"></a>
+                <a href="https://twitter.com/BULLCIT79432620?t=YKJia30azaUZ3CoXqg6acA&s=09"><img src="{% static 'img/Free_Twitter_3D_Illustration_download_in_PNG__OBJ_or_Blend_format-removebg-preview.png' %}" alt="twitter"></a>
+                <a href="https://t.me/+WBsM9InLDuY1YzFk"><img src="{% static 'img/telegram.png' %}" alt="telegram"></a>
            </div>
         <div class="copy"> <p>Copyright 2021 BULLCITY. All Rights Reserved</p></div>
     </footer>
-
+    
     <script src="{% static 'js/app.js' %}"></script>
 </body>
 </html>
