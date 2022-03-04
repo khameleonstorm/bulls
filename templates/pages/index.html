@@ -109,6 +109,17 @@ line-height: 1.8;
             <nav class="navbar">
                 <a href="{% url 'index' %}" class="nav-logo"><h1>BULLCITY</h1></a>
             <ul class="nav-menu">
+                {% if user.is_authenticated  %}
+                <li class="nav-item">
+                    <a href="{% url 'index' %}" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'about' %}" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://t.me/+WBsM9InLDuY1YzFk" class="nav-link">Support</a>
+                </li>
+                {% else %}
                 <li class="nav-item">
                     <a href="{% url 'index' %}" class="nav-link">Home</a>
                 </li>
@@ -124,6 +135,7 @@ line-height: 1.8;
                 <li class="nav-item">
                     <a href="{% url 'signup' %}" class="nav-link">Sign-Up</a>
                 </li>
+                {% endif %}
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -139,7 +151,11 @@ line-height: 1.8;
                 <p>Bullcity is a farming platform. Each level unlocks an additional level of benefits and profitability, rewarding holders of $Bull as much as possible.
                     At the moment our tiers provide extra APY in the form of $Bull tokens, while base profits are given in the farmed coin. In the future the tiers will 
                     unlock more utilities such as: referral rewards, generative NFT rewards, exclusive farming opportunities, and more.</p>
+                {% if user.is_authenticated  %}
+                <a href="{% url 'deposit' %}">Buy Bull</a>
+                {% else %}
                 <a href="{% url 'login' %}">Buy Bull</a>
+                {% endif %}
             </div>
             <div class="fimg">
                  <b>Welcome to Bullcity!!!</b>
@@ -173,7 +189,11 @@ line-height: 1.8;
                 when we launch one of the largest NFT MARKETPLACE the world has ever known.
                 Buy tokens and stake the industry's top coins for the best APY returns and farm Bull tokens.   
             </p>
+            {% if user.is_authenticated  %}
+            <a href="{% url 'deposit' %}">Earn Bull Tokens</a>
+            {% else %}
             <a href="{% url 'login' %}">Earn Bull Tokens</a>
+            {% endif %}
         </div>
     </section>
     
@@ -189,21 +209,33 @@ line-height: 1.8;
                     <img src="{% static 'img/btc.png' %}" alt="btc logo">
                     <h1>Start Farming Bitcoin</h1>
                     <p>APR 58%</p>
+                    {% if user.is_authenticated  %}
+                    <a href="{% url 'btc' %}" style=" background: #fd9855; animation-delay: 5s;">Farm Token</a>
+                    {% else %}
                     <a href="{% url 'login' %}" style=" background: #fd9855; animation-delay: 5s;">Farm Token</a>
+                    {% endif %}
                 </div>
                
                 <div class="farm anime2">
                     <img src="{% static 'img/eth.png' %}" alt="ethereum logo">
                     <h1>Start Farming Ethereum</h1>
                     <p>APR 50%</p>
+                    {% if user.is_authenticated  %}
+                    <a href="{% url 'eth' %}" style="background-image: linear-gradient(60deg, #90b1f7, #6294fff6); animation-delay: 7s;">Farm Token</a>
+                    {% else %}
                     <a href="{% url 'login' %}" style="background-image: linear-gradient(60deg, #90b1f7, #6294fff6); animation-delay: 7s;">Farm Token</a>
+                    {% endif %}
                 </div>
     
                 <div class="farm anime3">
                     <img src="{% static 'img/bnb.png' %}" alt="bnb coin logo">
                     <h1>Start Farming BNB</h1>
-                    <p>APR 41%</p>
+                    <p>APR 41%</p>            
+                    {% if user.is_authenticated  %}
+                    <a href="{% url 'bnb' %}" style="background-image: linear-gradient(90deg, #f8d71cf1, #f7c31bfa);">Farm Token</a>
+                    {% else %}
                     <a href="{% url 'login' %}" style="background-image: linear-gradient(90deg, #f8d71cf1, #f7c31bfa);">Farm Token</a>
+                    {% endif %}
                    </div>
     
             </div>
@@ -214,14 +246,22 @@ line-height: 1.8;
                     <img src="{% static 'img/sol.png' %}" alt="solana logo">
                     <h1>Start Farming Solana</h1>
                     <p>APR 77%</p>
+                   {% if user.is_authenticated  %}
+                   <a href="{% url 'sol' %}" style="background-image: linear-gradient(90deg, #88aefff8, #5e83ff);">Farm Token</a>
+                   {% else %}
                    <a href="{% url 'login' %}" style="background-image: linear-gradient(90deg, #88aefff8, #5e83ff);">Farm Token</a>
+                   {% endif %}
                 </div>    
            
               <div class="farm anime5">
                 <img src="{% static 'img/tether.png' %}" alt="tether logo">
                 <h1>Start Farming USDT</h1>
                 <p>APR 83%</p>
+                {% if user.is_authenticated  %}
+                <a  href="{% url 'usdt' %}" style="background-image: linear-gradient(90deg, #47cec7, #29d4e0);">Farm Token</a>
+                {% else %}
                 <a  href="{% url 'login' %}" style="background-image: linear-gradient(90deg, #47cec7, #29d4e0);">Farm Token</a>
+                {% endif %}
               </div> 
     
             </div>

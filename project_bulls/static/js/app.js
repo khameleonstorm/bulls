@@ -1,19 +1,7 @@
-var swiper = new Swiper(".mySwiper", {
-effect: "coverflow",
-grabCursor: true,
-centeredSlides: true,
-slidesPerView: "auto",
-loop: true,
-autoplay:true,
-coverflowEffect: {
-rotate: 0,
-stretch: 10,
-depth: 200,
-modifier: 2,
-slideShadows: true,
-},
-});
-
+setTimeout(function(){
+    $('#message').fadeOut('slow');
+}, 3000);
+    
 
 
 const hamburger = document.querySelector(".hamburger");
@@ -33,9 +21,7 @@ navLink.forEach(n => n.addEventListener("click", closeMenu));
 function closeMenu() {
 hamburger.classList.remove("active");
 navMenu.classList.remove("active");
-}
-
-
+};
 
 
 
@@ -56,6 +42,21 @@ alert("Copied: " + copyText.value);
 }
 
 
+var swiper = new Swiper(".mySwiper", {
+effect: "coverflow",
+grabCursor: true,
+centeredSlides: true,
+slidesPerView: "auto",
+loop: true,
+autoplay:true,
+coverflowEffect: {
+rotate: 0,
+stretch: 10,
+depth: 200,
+modifier: 2,
+slideShadows: true,
+},
+});
 
 
 

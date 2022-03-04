@@ -26,7 +26,7 @@
             </div>
 
             <div class="nav-greet">
-                <h1>Hello Name</h1>
+                <h1>Hello {{user.username}}</h1>
             </div>
 
             <ul class="back">
@@ -46,7 +46,11 @@
                         <a href="{% url 'withdraw' %}" class="nav-link">Withdraw</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">Logout</a>
+                        <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link">Logout</a>
+                        <form action="{% url 'logout' %}" method="POST" id="logout">
+                            {% csrf_token %}
+                            <input type="hidden">
+                        </form>
                     </li>
             <ul>
         </nav>
@@ -55,22 +59,22 @@
         <div class="yourd">
             <h2>Your Dashboard</h2>
         </div>
-
+        
         <div class="acc-bal">
             <div class="bal">
                 <img src="{% static 'img/Tether-Crypto-Logo-PNG-Photos.png' %}" alt="crypto-wallet">
                 <p>Assets</p>
-                <h2>$0</h2>
+                <h2>${{ user.balance.Assets|default:"0.00" }}</h2>
             </div>
             <div class="bal">
                 <img src="{% static 'img/Tether-Crypto-Logo-PNG-Photos.png' %}" alt="crypto-wallet">
                 <p>Staked</p>
-                <h2>$0</h2>
+                <h2>${{ user.balance.Staked|default:"0.00" }}</h2>
             </div>
             <div class="bal">
                 <img src="{% static 'img/Tether-Crypto-Logo-PNG-Photos.png' %}" alt="crypto-wallet">
                 <p>Profits</p>
-                <h2>$0</h2>
+                <h2>${{ user.balance.Profits|default:"0.00" }}</h2>
             </div>
         </div>
 
