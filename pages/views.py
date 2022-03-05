@@ -108,4 +108,4 @@ def usdt(request):
 @login_required
 def dashboard(request):
     balance = Balance.objects.all()
-    return render(request, 'pages/dashboard.html', {'balance': balance})
+    return render(request, 'pages/Dashboard.html', {'balance': balance})
