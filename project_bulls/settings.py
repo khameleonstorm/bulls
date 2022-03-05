@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-import environ
 import django_heroku
 from decouple import config, Csv
 
