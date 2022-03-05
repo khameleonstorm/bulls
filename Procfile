@@ -1,1 +1,1 @@
-web: gunicorn bulls.wsgi:application --log-file - 
+web: gunicorn bulls.wsgi --log-file - 
