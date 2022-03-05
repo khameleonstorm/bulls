@@ -1,1 +1,1 @@
-web: gunicorn BULLCITY.wsgi
+web: gunicorn BULLCITY.wsgi --log-file -
