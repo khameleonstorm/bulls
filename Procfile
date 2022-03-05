@@ -1,1 +1,1 @@
-web: gunicorn BULLCITY.wsgi --log-file -
+web: gunicorn project_bulls.wsgi
