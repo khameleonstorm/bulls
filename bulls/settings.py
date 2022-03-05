@@ -72,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-
+WSGI_APPLICATION = 'bulls.wsgi.application'
 
 
 # Database
