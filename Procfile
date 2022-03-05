@@ -1,1 +1,1 @@
-web: gunicorn project_bulls.wsgi --log-file=-
+web: gunicorn bulls.wsgi --log-file -
