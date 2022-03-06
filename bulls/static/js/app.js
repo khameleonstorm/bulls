@@ -26,6 +26,15 @@ navMenu.classList.remove("active");
 
 
 
+window.addEventListener('scroll', function() {
+let scrollMenu = document.querySelector(".nav-menu2");
+scrollMenu.classList.toggle("scrolling", window.scrollY > 0);
+})
+
+    
+    
+
+
 function myFunction() {
 /* Get the text field */
 const copyText = document.getElementById("myInput");

@@ -108,7 +108,7 @@ line-height: 1.8;
         <header class="header">
             <nav class="navbar">
                 <a href="{% url 'index' %}" class="nav-logo"><h1>BULLCITY</h1></a>
-            <ul class="nav-menu">
+            <ul class="nav-menu nav-menu2">
                 {% if user.is_authenticated  %}
                 <li class="nav-item">
                     <a href="{% url 'index' %}" class="nav-link">Home</a>
@@ -118,6 +118,9 @@ line-height: 1.8;
                 </li>
                 <li class="nav-item">
                     <a href="https://t.me/+WBsM9InLDuY1YzFk" class="nav-link">Support</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'dashboard' %}" class="nav-link">Dashboard</a>
                 </li>
                 {% else %}
                 <li class="nav-item">

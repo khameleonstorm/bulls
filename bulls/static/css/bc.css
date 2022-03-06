@@ -669,6 +669,10 @@ right: 0;
 }
 
 
+.scrolling{
+transition: 1s;
+opacity: 0%;
+}
 
 
 

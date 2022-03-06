@@ -29,7 +29,7 @@
                 <h1>Hello {{user.username}}</h1>
             </div>
 
-            <ul class="back">
+            <ul class="back nav-menu2">
                     <li class="nav-item">
                         <a href="{% url 'index' %}" class="nav-link">Home</a>
                     <li class="nav-item">
@@ -124,6 +124,15 @@
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
         }
+
+
+        
+
+        window.addEventListener('scroll', function() {
+        let scrollMenu = document.querySelector(".nav-menu2");
+        scrollMenu.classList.toggle("scrolling", window.scrollY > 0);
+        })
+    
     </script>
 </body>
 </html>
